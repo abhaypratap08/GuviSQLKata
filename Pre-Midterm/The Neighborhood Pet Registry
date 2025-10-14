@@ -1,0 +1,10 @@
+Q1. Select count(*) from pets
+
+Q2. select age from pets where owner = "Alice" and name = "Fluffy"
+
+Q3. update pets set age = 6 where name = "Buddy";
+    select * from pets where name = "Buddy";
+
+Q4. insert into pets(id, name, species, age, owner)
+    values(6, "Shelly", "Turtle", 10, "Grace");
+    select * from pets where owner = "Grace";
