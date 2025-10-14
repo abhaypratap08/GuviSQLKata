@@ -1,0 +1,18 @@
+Q1. Select sum(price*stock) as inventory from books;
+
+Q2. select genre , count(*) as book_count from books group by genre order by book_count desc;
+
+Q3. SELECT title,
+       price * 0.9 AS original_price,
+       price AS new_price FROM books WHERE publication_year < 1950;
+
+Q4. SELECT title, author, genre, price
+    FROM books
+    WHERE genre = 'Fiction'
+    OR price < 12;
+
+Q5. SELECT
+    title,
+    stock AS current_stock,
+    stock AS days_to_sell_all_copies FROM books WHERE stock > 10
+    ORDER BY days_to_sell_all_copies DESC;
