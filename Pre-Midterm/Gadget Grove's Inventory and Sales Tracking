@@ -1,0 +1,28 @@
+Q1. SELECT name, stock_quantity, category
+    FROM products
+    WHERE stock_quantity < 100
+    ORDER BY stock_quantity ASC;
+
+Q2. SELECT p.name, p.category, SUM(s.quantity) AS total_quantity_sold FROM products p
+    JOIN sales s ON p.id = s.product_id
+    GROUP BY p.id, p.name, p.category
+    ORDER BY total_quantity_sold ASC LIMIT 1;
+
+Q3. UPDATE products SET stock_quantity = stock_quantity + 25 WHERE name = 'Laptop';
+    SELECT * FROM products WHERE name = 'Laptop';
+
+Q4. SELECT p.category, ROUND(SUM(p.price * s.quantity), 2) AS total_revenue
+    FROM products p
+    JOIN sales s ON p.id = s.product_id
+    GROUP BY p.category
+    ORDER BY total_revenue DESC;
+
+Q5. SELECT p.name,
+    SUM(s.quantity) AS total_quantity_sold,
+    MAX(s.sale_date) AS last_sale_date
+    FROM products p
+    JOIN sales s ON p.id = s.product_id
+    GROUP BY p.id, p.name
+    ORDER BY total_quantity_sold DESC
+    LIMIT 1;
+
