@@ -4,4 +4,16 @@ Q2. INSERT INTO courses (course_id, course_name, credits)
     VALUES (106, 'Artificial Intelligence', 5);
     SELECT * FROM courses WHERE course_id = 106;
 
-Q3. (NOT FOUND)
+Q3. CREATE TABLE enrollments (
+    enrollment_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    student_id INTEGER,
+    course_id INTEGER,
+    FOREIGN KEY (student_id) REFERENCES students(student_id),
+    FOREIGN KEY (course_id) REFERENCES courses(course_id),
+    UNIQUE(student_id, course_id)
+    );
+    INSERT INTO enrollments (student_id, course_id)
+    SELECT s.student_id, c.course_id
+    FROM students s, courses c
+    WHERE s.student_name = 'Isha' AND c.course_name = 'Operating Systems';
+    SELECT * FROM enrollments;
