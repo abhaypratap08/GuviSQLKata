@@ -1,0 +1,7 @@
+Q1. (NOT FOUND)
+
+Q2. INSERT INTO courses (course_id, course_name, credits) 
+    VALUES (106, 'Artificial Intelligence', 5);
+    SELECT * FROM courses WHERE course_id = 106;
+
+Q3. (NOT FOUND)
