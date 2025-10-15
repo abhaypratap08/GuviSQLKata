@@ -1,0 +1,13 @@
+Q1. INSERT INTO chocolates (id,name, type, quantity, price)
+    VALUES (4,'Berry Bliss', 'Berry', 50, 200);
+    SELECT * FROM chocolates WHERE id = 4;
+
+Q2. UPDATE chocolates SET quantity = 250 WHERE name = 'Milk Magic';
+    SELECT * FROM chocolates WHERE name = 'Milk Magic';
+
+Q3. DELETE FROM chocolates WHERE name = 'Nutty Crunch';
+    SELECT * FROM chocolates;
+
+Q4. SELECT name, price FROM chocolates ORDER BY price DESC;
+
+Q5. SELECT SUM(quantity) AS total_quantity FROM chocolates;
