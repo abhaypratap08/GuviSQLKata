@@ -1,4 +1,10 @@
-Q1. (NOT FOUND)
+Q1. ALTER TABLE students
+    ADD CONSTRAINT unique_email UNIQUE(email);
+
+    INSERT INTO students (student_id, student_name, email)
+    VALUES (6, 'Tanya', 'tanya@example.com');
+    SELECT * FROM students
+    WHERE email = 'tanya@example.com';
 
 Q2. INSERT INTO courses (course_id, course_name, credits) 
     VALUES (106, 'Artificial Intelligence', 5);
