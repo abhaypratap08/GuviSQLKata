@@ -1,0 +1,4 @@
+Q1. SELECT flight_id, origin, destination, (capacity - booked_seats) AS available_seats
+    FROM flights WHERE booked_seats < capacity;
+
+Q2. SELECT SUM(booked_seats) AS total_passengers FROM flights;
