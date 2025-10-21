@@ -1,0 +1,13 @@
+Q1. SELECT COUNT(*) FROM books;
+
+
+Q2. UPDATE books SET stock = 45 WHERE title = 'Treasure Island';
+
+
+Q3. INSERT INTO books VALUES (4, 'Around the World in 80 Days', 'Adventure', 350.00, 100);
+
+
+Q4. SELECT SUM(price * stock) FROM books;
+
+
+Q5. DELETE FROM books WHERE title = 'Moby Dick';
