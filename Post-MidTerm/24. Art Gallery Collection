@@ -1,0 +1,18 @@
+Q1> select title, max(price) from artworks;
+
+Q2> select artist,avg(price) from artworks
+where artist = 'Salvador Dali' or artist = 'Vincent Van Gogh'
+group by artist;
+
+Q3> update artworks
+    set price = price * 1.1
+    where year<1900;
+
+
+
+Q4>select max(year), max(price) as total_value
+from artworks;
+
+Q5> select artist,count(*) from artworks 
+group by artist 
+order by count(*) desc;
